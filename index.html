@@ -129,14 +129,16 @@
     <p class="text-2xl text-pink-600 dancing mb-6 font-bold drop-shadow-sm text-center">Biziň yşk aýdymymyz 🎵</p>
     
     <div class="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-black mb-8 relative flex items-center justify-center" style="aspect-ratio: 16/9;">
-     <iframe id="loveVideo"
-             class="absolute inset-0 w-full h-full" 
-             src="https://www.youtube.com/embed/lIzadDLJXs4?rel=0" 
-             title="Biziň yşk aýdymymyz" 
-             frameborder="0" 
-             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-             allowfullscreen>
-     </iframe>
+     <video id="loveVideo" 
+            controls 
+            playsinline 
+            preload="metadata" 
+            poster="https://i.postimg.cc/0jgz1syw/IMG_9336.png"
+            class="absolute inset-0 w-full h-full object-cover" 
+            style="outline:none;display:block;">
+       <source src="video.mp4" type="video/mp4">
+       Siziň brauzeriňiz wideony açyp bilenok.
+     </video>
     </div>
     
     <div class="flex items-center justify-center my-10 w-full opacity-70">
@@ -236,8 +238,7 @@
         window.scrollTo(0, 0);
         const loveVideo = document.getElementById('loveVideo');
         if (loveVideo) {
-          let tempSrc = loveVideo.src;
-          loveVideo.src = tempSrc;
+          loveVideo.currentTime = 0;
         }
       }, 800);
     }
@@ -251,8 +252,7 @@
 
       const loveVideo = document.getElementById('loveVideo');
       if (loveVideo) {
-        let tempSrc = loveVideo.src;
-        loveVideo.src = tempSrc;
+        loveVideo.pause();
       }
       
       mainContent.classList.remove('show');
