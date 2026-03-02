@@ -97,15 +97,12 @@
  <div class="divider-line"></div>
  <div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div>
  <div class="divider-line"></div>
-</div><p class="text-2xl text-pink-600 dancing mb-6 font-bold drop-shadow-sm text-center">Biziň yşk aýdymymyz 🎵</p><div class="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-black mb-8 relative flex items-center justify-center" style="aspect-ratio: 16/9;">
- <iframe id="loveVideo"
-         class="absolute inset-0 w-full h-full" 
-         src="https://www.youtube.com/embed/5hkORN-qxZ0?rel=0&origin=https://rvv5ktst8d-netizen.github.io" 
-         title="Biziň yşk aýdymymyz" 
-         frameborder="0" 
-         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-         allowfullscreen>
- </iframe>
+</div><p class="text-2xl text-pink-600 dancing mb-6 font-bold drop-shadow-sm text-center">Biziň yşk aýdymymyz 🎵</p>
+<div class="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-black mb-8 relative" style="aspect-ratio: 16/9;">
+  <video id="loveVideo" controls autoplay loop style="width:100%; height:100%; object-fit:cover;">
+    <source src="https://www.dropbox.com/scl/fi/iup08hy91yquzwtlgg9g6/Soygulim.mp4?rlkey=76whwc8uasb4u483f07jurca7&st=cs3ms26a&dl=1" type="video/mp4">
+    Brauzeriňiz video ýüklemegi goldamaýar.
+  </video>
 </div><div class="flex items-center justify-center my-10 w-full opacity-70">
  <div class="divider-line"></div>
  <div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div>
@@ -184,11 +181,6 @@
           });
         });
         window.scrollTo(0, 0);
-        const loveVideo = document.getElementById('loveVideo');
-        if (loveVideo) {
-          let tempSrc = loveVideo.src;
-          loveVideo.src = tempSrc;
-        }
       }, 800);
     }
 
@@ -197,12 +189,6 @@
       if (closeSound) {
         closeSound.currentTime = 0;
         closeSound.play().catch(() => {});
-      }
-
-      const loveVideo = document.getElementById('loveVideo');
-      if (loveVideo) {
-        let tempSrc = loveVideo.src;
-        loveVideo.src = tempSrc;
       }
       
       mainContent.classList.remove('show');
