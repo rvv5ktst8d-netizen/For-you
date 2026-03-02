@@ -1,0 +1,254 @@
+Şu kodyñ hiç ýerini üýtgetme, diñeje YouTube link näme üçin açmaýanyny bil
+<!doctype html>
+<html lang="tk">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Söýgülim üçin 🌷💗</title><meta property="og:title" content="Söýgülim üçin 🌷💗 8-nji Mart Gutlagy">
+  <meta property="og:description" content="Mähribanym, seniň üçin ýörite taýarladym ❤️ Kalbymyzda söýgi uçguny döreli bäri... Açyp gör, meniň ýeke-täk zenanym!">
+  <meta property="og:image" content="https://i.postimg.cc/J7JycGpz/IMG_9334.png">
+  <meta property="og:type" content="website"><link rel="preconnect" href="https://i.postimg.cc" crossorigin>
+  <link rel="preload" as="image" href="https://i.postimg.cc/J7JycGpz/IMG_9334.png">
+  <link rel="preload" as="image" href="https://i.postimg.cc/0jgz1syw/IMG_9336.png"><audio id="openSound" src="https://actions.google.com/sounds/v1/cartoon/magic_chime.ogg" preload="auto"></audio>
+<audio id="closeSound" src="https://actions.google.com/sounds/v1/water/water_drop.ogg" preload="auto"></audio>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&amp;family=Dancing+Script:wght@700&amp;display=swap" rel="stylesheet"><style>
+    * {margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%;width:100%}
+    @keyframes floatUp{0%{transform:translateY(110vh) scale(0.5) rotate(0deg) translateX(0px);opacity:0}20%{opacity:1}80%{opacity:0.8}100%{transform:translateY(-20vh) scale(1.5) rotate(360deg) translateX(50px);opacity:0}}
+    @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.05);filter:drop-shadow(0 0 20px rgba(255,20,147,0.5))}}
+    .floating-item{position:fixed;width:60px;height:60px;animation:floatUp linear infinite;z-index:0;pointer-events:none;filter:drop-shadow(0 5px 15px rgba(255,20,147,0.4));will-change:transform,opacity}
+    body{background:linear-gradient(135deg,#ff1493 0%,#ff69b4 25%,#ff85c1 50%,#ffb6c1 75%,#ffc0cb 100%);background-size:400% 400%;animation:gradientBg 20s ease infinite;font-family:'Playfair Display',serif;overflow-x:hidden;position:relative}
+    body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.1) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(255,255,255,0.05) 0%,transparent 50%);pointer-events:none;z-index:0}
+    @keyframes gradientBg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .glow-text{text-shadow:0 0 20px rgba(255,255,255,0.8),0 0 40px rgba(255,20,147,0.3);filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
+    .playfair{font-family:'Playfair Display',serif}
+    .dancing{font-family:'Dancing Script',cursive}
+    .glass-container{background:rgba(255,255,255,0.92);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border:2px solid rgba(255,255,255,0.95);box-shadow:0 8px 32px 0 rgba(255,20,147,0.2),0 0 0 1px rgba(255,255,255,0.5) inset;border-radius:30px}
+    #mainContent{display:none;opacity:0;transform:translateY(30px);transition:all 1s ease;position:relative;z-index:10}
+    #mainContent.show{opacity:1;transform:translateY(0)}
+    #intro{transition:opacity 1s ease,transform 1s ease;background:linear-gradient(135deg,rgba(255,20,147,0.3) 0%,rgba(255,105,180,0.2) 100%);backdrop-filter:blur(10px)}
+    .divider-line{height:2px;background:linear-gradient(90deg,transparent,rgba(255,20,147,0.4),transparent);flex-grow:1}
+    .intro-flower-btn{animation:heartbeat 2.5s infinite ease-in-out;cursor:pointer;background:transparent;border:none;box-shadow:none;display:flex;align-items:center;justify-content:center;width:320px;height:320px;transition:all .3s ease;margin:0 auto}
+    .intro-flower-btn img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 15px 25px rgba(255,20,147,0.5))}
+    .intro-flower-btn:hover{transform:scale(1.05) rotate(2deg)}
+    .second-page-flower{max-width:280px;width:100%;height:auto;margin:0 auto;filter:drop-shadow(0 15px 25px rgba(255,20,147,0.4));transition:transform .5s ease}
+    .second-page-flower:hover{transform:scale(1.05)}
+    .button-modern{background:linear-gradient(135deg,#ff1493 0%,#ff69b4 100%);border:none;border-radius:20px;padding:15px 30px;color:white;font-size:1rem;font-weight:bold;cursor:pointer;transition:all .3s ease;box-shadow:0 10px 30px rgba(255,20,147,0.3);display:inline-flex;align-items:center;gap:10px}
+    .button-modern:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,20,147,0.4)}
+
+    /* Polaroid Galereýa üçin Dizaýn */
+    .polaroid-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem; 
+      margin: 2rem auto;
+      padding: 0.5rem;
+    }
+    .polaroid-item {
+      background: #ffffff;
+      padding: 10px 10px 35px 10px; 
+      box-shadow: 0 10px 25px rgba(255,20,147,0.2);
+      border-radius: 4px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transform: rotate(-3deg);
+    }
+    .polaroid-item:nth-child(even) {
+      transform: rotate(3deg);
+    }
+    .polaroid-item:hover {
+      transform: scale(1.08) rotate(0deg); 
+      box-shadow: 0 15px 35px rgba(255,20,147,0.4);
+      z-index: 10;
+      position: relative;
+    }
+    .polaroid-item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+    }
+    .polaroid-caption {
+      text-align: center;
+      color: #ff1493;
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 2px 4px rgba(255,20,147,0.1);
+      line-height: 1.4;
+    }
+  </style></head>
+ <body class="min-h-screen text-white relative antialiased">
+  <div id="animations" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div><div id="intro" class="fixed inset-0 flex flex-col items-center justify-center z-50 cursor-pointer" onclick="openContent()">
+   <div class="text-center px-4">
+    <h2 class="text-3xl md:text-4xl text-white mb-10 dancing glow-text drop-shadow-lg leading-relaxed">Ömrümiň manysy,<br>ýüregimiň ýeke-täk eýesine...</h2><div class="intro-flower-btn"><img src="https://i.postimg.cc/J7JycGpz/IMG_9334.png" alt="Söýgülüm üçin Gül" width="320" height="320"></div>
+<div class="mt-8 text-lg md:text-xl font-bold text-white bg-gradient-to-r from-pink-400 to-pink-300 inline-block px-8 py-4 rounded-full animate-bounce shadow-[0_10px_25px_rgba(236,72,153,0.5)]">Açmak üçin güliň üstüne basyň ❤️</div></div>
+  </div><div id="mainContent" class="relative z-10 max-w-2xl mx-auto pt-10 pb-12 px-4 h-full overflow-auto flex flex-col items-center">
+   <div class="glass-container w-full p-8 md:p-10 mb-8 text-gray-800"><h1 class="text-4xl md:text-5xl font-extrabold text-pink-600 tracking-wide playfair drop-shadow-sm mb-6 mt-4 text-center">Ýüregimiň soltany,<br>bahar pasly dek owadan söýgüli ýarym, 8-nji mart baýramyň gutly bolsun!</h1><div class="flex justify-center mb-8"><img src="https://i.postimg.cc/0jgz1syw/IMG_9336.png" alt="Owadan Buket" class="second-page-flower" width="280" height="280"></div><p class="text-lg text-pink-600 font-bold mb-8 opacity-90 text-center">Sen – meň ykbalymyň maňa peşgeş beren iň gymmatly baýlygy... 💕</p><div class="mt-8 mb-12">
+ <p class="text-2xl text-pink-600 dancing mb-6 font-bold drop-shadow-sm text-center">Kalbymyzda söýgi uçguny döreli bäri...</p>
+ <div class="flex justify-center gap-2 sm:gap-4">
+  <div class="bg-white border-2 border-pink-200 rounded-2xl w-20 h-24 flex flex-col items-center justify-center shadow-[0_8px_20px_rgba(236,72,153,0.12)] hover:-translate-y-1 transition-transform"><span id="c-days" class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-red-500 playfair">00</span><span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mt-1">Gün</span></div>
+  <div class="bg-white border-2 border-pink-200 rounded-2xl w-20 h-24 flex flex-col items-center justify-center shadow-[0_8px_20px_rgba(236,72,153,0.12)] hover:-translate-y-1 transition-transform"><span id="c-hours" class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-red-500 playfair">00</span><span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mt-1">Sagat</span></div>
+  <div class="bg-white border-2 border-pink-200 rounded-2xl w-20 h-24 flex flex-col items-center justify-center shadow-[0_8px_20px_rgba(236,72,153,0.12)] hover:-translate-y-1 transition-transform"><span id="c-mins" class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-red-500 playfair">00</span><span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mt-1">Minut</span></div>
+  <div class="bg-white border-2 border-pink-200 rounded-2xl w-20 h-24 flex flex-col items-center justify-center shadow-[0_8px_20px_rgba(236,72,153,0.12)] hover:-translate-y-1 transition-transform"><span id="c-secs" class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-red-500 playfair">00</span><span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mt-1">Sekunt</span></div>
+ </div>
+</div><div class="my-10 italic text-lg md:text-xl text-gray-700 font-medium playfair leading-relaxed bg-gradient-to-r from-pink-50 to-red-50 p-6 rounded-2xl border-l-4 border-pink-400 shadow-sm text-left">
+ Gözleriň gözlerime kaklyşan şol ilkinji pursat kalbymda ebedilik nagyş bolup galdy. Şol pursat bütin älem togtan ýaly boldy we ýüregimiň birje urgusynda tutuş ömrümi baglaýjak yşkymy tapandygyma düşündim. Seniň mähirli ýylgyryşyň garaňky gijelerimi ýagtyldyp, ykbalymy iň owadan reňkler bilen täzeden ýazdy... ✨
+</div><div class="flex items-center justify-center my-10 w-full opacity-70">
+ <div class="divider-line"></div>
+ <div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div>
+ <div class="divider-line"></div>
+</div><p class="text-2xl text-pink-600 dancing mb-6 font-bold drop-shadow-sm text-center">Biziň yşk aýdymymyz 🎵</p><div class="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-black mb-8 relative flex items-center justify-center" style="aspect-ratio: 16/9;">
+ <iframe id="loveVideo"
+         class="absolute inset-0 w-full h-full" 
+         src="https://www.youtube.com/embed/5hkORN-qxZ0?rel=0" 
+         title="Biziň yşk aýdymymyz" 
+         frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+         allowfullscreen>
+ </iframe>
+</div><div class="flex items-center justify-center my-10 w-full opacity-70">
+ <div class="divider-line"></div>
+ <div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div>
+ <div class="divider-line"></div>
+</div><p class="text-2xl text-pink-600 dancing font-bold drop-shadow-sm text-center mt-4">Biziň iň süýji ýatlamalarymyz 📸</p><div class="polaroid-gallery">
+  <div class="polaroid-item">
+    <img src="https://i.postimg.cc/Pr86hbpG/IMG_9358.jpg" alt="Ýatlama 1" width="300" height="160">
+  </div>
+  <div class="polaroid-item">
+    <img src="https://i.postimg.cc/SNzZqLXD/IMG_9359.jpg" alt="Ýatlama 2" width="300" height="160">
+  </div>
+  <div class="polaroid-item">
+    <img src="https://i.postimg.cc/hP7Cg8Jk/IMG_9360.jpg" alt="Ýatlama 3" width="300" height="160">
+  </div>
+  <div class="polaroid-item">
+    <img src="https://i.postimg.cc/NGnNWC0K/IMG_9361.jpg" alt="Ýatlama 4" width="300" height="160">
+  </div>
+</div><div class="polaroid-caption dancing font-bold">
+ Senli geçen her pursadym, ömrümiň iň süýji ertekisi... ✨
+</div><div class="flex items-center justify-center my-10 w-full opacity-70">
+ <div class="divider-line"></div>
+ <div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div>
+ <div class="divider-line"></div>
+</div><div class="text-left bg-gradient-to-br from-white to-pink-50 p-6 md:p-8 rounded-3xl shadow-[0_10px_30px_rgba(255,20,147,0.1)] border border-pink-200 mb-10 relative overflow-hidden">
+ <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-300 via-red-300 to-pink-300"></div>
+ <h3 class="text-3xl dancing text-pink-600 mb-4 font-bold text-center mt-2">Meniň owadan Şa zenanym,</h3>
+ <p class="text-[1.05rem] text-gray-700 leading-relaxed font-medium">Şu ajaýyp 8-nji mart güninde, seniň barlygyňyň durmuşyma nähili uly many we gözellik goşýandygyny ýene bir gezek ýatlatmak isleýärin. Sen meniň ylhamym, kalbymyň rahatlygy we ömrümiň iň süýji begenji. Edýän ähli arzuw-umytlarym, diňe seniň ýüzüňdäki şol mähir doly ýylgyryşy ebedi saklamak üçindir. Goý, seniň durmuşyňam maňa eçilýän söýgiň ýaly tämiz, asuda we reňkli bolsun. 8-mart baýramyň gutly bolsun, ömrümiň bezegi. Seni çäksiz we ebedi söýýärin! 💗</p>
+</div><div class="text-center py-12">
+ <div class="flex justify-center mb-4"><img src="https://i.postimg.cc/tgTZhkcn/IMG_9343.png" alt="Söýgi nyşany" class="w-32 md:w-40 drop-shadow-[0_10px_15px_rgba(255,20,147,0.4)] hover:scale-105 transition-transform duration-300" width="160" height="160"></div>
+ <p class="text-2xl dancing text-pink-600 font-bold mt-8">I love you</p>
+</div><button onclick="goHome()" class="button-modern w-full mt-8 justify-center">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+ Baş sahypa dolan
+</button></div>
+  </div><script>
+    const intro = document.getElementById('intro');
+    const mainContent = document.getElementById('mainContent');
+    const container = document.getElementById('animations');
+    let hasOpened = false;
+    let petalCount = 0;
+
+    const PETAL_SVG = `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><g transform="translate(50,50)"><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ff1493" opacity="0.85" transform="rotate(0)"/><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ff69b4" opacity="0.85" transform="rotate(72)"/><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ff85c1" opacity="0.85" transform="rotate(144)"/><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ffb6c1" opacity="0.85" transform="rotate(216)"/><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ffc0cb" opacity="0.85" transform="rotate(288)"/><circle cx="0" cy="0" r="12" fill="#ffd700" opacity="0.95"/></g></svg>`;
+
+    function createFlowerPetal() {
+      if (petalCount >= 30) return;
+      petalCount++;
+      const el = document.createElement('div');
+      el.className = 'floating-item';
+      el.innerHTML = PETAL_SVG;
+      el.style.cssText = `left:${Math.random() \* 100}%;animation-duration:${8 + Math.random() * 12}s`;
+      container.appendChild(el);
+      setTimeout(() => {
+        el.remove();
+        petalCount--;
+      }, 20000);
+    }
+
+    function openContent() {
+      if (hasOpened) return;
+      hasOpened = true;
+      
+      const openSound = document.getElementById('openSound');
+      if (openSound) {
+        openSound.currentTime = 0;
+        openSound.play().catch(() => {});
+      }
+
+      intro.style.opacity = '0';
+      intro.style.transform = 'scale(1.1)';
+      setTimeout(() => {
+        intro.style.display = 'none';
+        mainContent.style.display = 'flex';
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            mainContent.classList.add('show');
+          });
+        });
+        window.scrollTo(0, 0);
+        const loveVideo = document.getElementById('loveVideo');
+        if (loveVideo) {
+          let tempSrc = loveVideo.src;
+          loveVideo.src = tempSrc;
+        }
+      }, 800);
+    }
+
+    function goHome() {
+      const closeSound = document.getElementById('closeSound');
+      if (closeSound) {
+        closeSound.currentTime = 0;
+        closeSound.play().catch(() => {});
+      }
+
+      const loveVideo = document.getElementById('loveVideo');
+      if (loveVideo) {
+        let tempSrc = loveVideo.src;
+        loveVideo.src = tempSrc;
+      }
+      
+      mainContent.classList.remove('show');
+      setTimeout(() => {
+        mainContent.style.display = 'none';
+        intro.style.display = 'flex';
+        intro.style.opacity = '1';
+        intro.style.transform = 'scale(1)';
+        hasOpened = false;
+        window.scrollTo(0, 0);
+      }, 800);
+    }
+
+    function startTogetherCounter() {
+      const startDate = new Date('2025-12-02T00:00:00').getTime();
+      const dEl = document.getElementById('c-days');
+      const hEl = document.getElementById('c-hours');
+      const mEl = document.getElementById('c-mins');
+      const sEl = document.getElementById('c-secs');
+
+      let lastSec = -1;
+      function tick() {
+        const now = Date.now();
+        const currentSec = Math.floor(now / 1000);
+        if (currentSec !== lastSec) {
+          lastSec = currentSec;
+          const distance = now - startDate;
+          const days = Math.floor(distance / 86400000);
+          const hours = Math.floor((distance % 86400000) / 3600000);
+          const minutes = Math.floor((distance % 3600000) / 60000);
+          const seconds = Math.floor((distance % 60000) / 1000);
+          if (dEl) dEl.textContent = days;
+          if (hEl) hEl.textContent = hours.toString().padStart(2, '0');
+          if (mEl) mEl.textContent = minutes.toString().padStart(2, '0');
+          if (sEl) sEl.textContent = seconds.toString().padStart(2, '0');
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    let petalInterval = setInterval(createFlowerPetal, 2500);
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < 10; i++) setTimeout(createFlowerPetal, i * 300);
+
+    startTogetherCounter();
+  </script></body>
+</html>
