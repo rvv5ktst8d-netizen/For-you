@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Söýgülim üçin 🌷💗</title>
+  
   <meta property="og:title" content="Söýgülim üçin 🌷💗 8-nji Mart Gutlagy">
-  <meta property="og:description" content="Mähribanym, seniň üçin ýörite taýarladym ❤️ Kalbymyzda söýgi uçguny döreli bäri... Açyp gör, meniň ýeke-täk zenanym!">
+  <meta property="og:description" content="Mähribanym, seniň üçin ýörite taýarladym ❤️ Açyp gör, meniň ýeke-täk zenanym!">
   <meta property="og:image" content="https://i.postimg.cc/J7JycGpz/IMG_9334.png">
   <meta property="og:type" content="website">
   
   <link rel="preconnect" href="https://i.postimg.cc" crossorigin>
   <link rel="preload" as="image" href="https://i.postimg.cc/J7JycGpz/IMG_9334.png">
-  <link rel="preload" as="image" href="https://i.postimg.cc/0jgz1syw/IMG_9336.png">
+  <link rel="preload" as="image" href="https://i.postimg.cc/bYCHFKGn/IMG-9414.png">
   
   <audio id="openSound" src="https://actions.google.com/sounds/v1/cartoon/magic_chime.ogg" preload="auto"></audio>
   <audio id="closeSound" src="https://actions.google.com/sounds/v1/water/water_drop.ogg" preload="auto"></audio>
@@ -21,92 +22,119 @@
   
   <style>
     * {margin:0;padding:0;box-sizing:border-box}
-    html,body{height:100%;width:100%}
-    @keyframes floatUp{0%{transform:translateY(110vh) scale(0.5) rotate(0deg) translateX(0px);opacity:0}20%{opacity:1}80%{opacity:0.8}100%{transform:translateY(-20vh) scale(1.5) rotate(360deg) translateX(50px);opacity:0}}
-    @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.05);filter:drop-shadow(0 0 20px rgba(255,20,147,0.5))}}
-    .floating-item{position:fixed;width:60px;height:60px;animation:floatUp linear infinite;z-index:0;pointer-events:none;filter:drop-shadow(0 5px 15px rgba(255,20,147,0.4));will-change:transform,opacity}
-    body{background:linear-gradient(135deg,#ff1493 0%,#ff69b4 25%,#ff85c1 50%,#ffb6c1 75%,#ffc0cb 100%);background-size:400% 400%;animation:gradientBg 20s ease infinite;font-family:'Playfair Display',serif;overflow-x:hidden;position:relative}
-    body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.1) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(255,255,255,0.05) 0%,transparent 50%);pointer-events:none;z-index:0}
+    html,body{height:100%;width:100%;background-color:#ffe4e1;overflow-x:hidden;}
+    
+    /* Fon we jadyly reňkler */
+    body{background:linear-gradient(135deg,#ff1493 0%,#ff69b4 25%,#ff85c1 50%,#ffb6c1 75%,#ffc0cb 100%);background-size:400% 400%;animation:gradientBg 20s ease infinite;font-family:'Playfair Display',serif;position:relative}
     @keyframes gradientBg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    
     .glow-text{text-shadow:0 0 20px rgba(255,255,255,0.8),0 0 40px rgba(255,20,147,0.3);filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
     .playfair{font-family:'Playfair Display',serif}
     .dancing{font-family:'Dancing Script',cursive}
+    
+    /* Guller we Sarmaşyklar (Vines) */
+    .vines-layer {
+      position: fixed; inset: 0; pointer-events: none; z-index: 5;
+      background-image: 
+        /* Çep Sarmaşyk */
+        url("data:image/svg+xml,%3Csvg width='60' height='250' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,0 Q50,60 10,125 T10,250' fill='none' stroke='%232e8b57' stroke-width='3' opacity='0.8'/%3E%3Cpath d='M10,40 Q30,30 40,40 Q30,50 10,40' fill='%233cb371'/%3E%3Cpath d='M25,90 Q5,80 0,90 Q5,100 25,90' fill='%233cb371'/%3E%3Ccircle cx='30' cy='60' r='6' fill='%23ff69b4'/%3E%3Ccircle cx='10' cy='150' r='5' fill='%23ffb6c1'/%3E%3C/svg%3E"),
+        /* Sag Sarmaşyk */
+        url("data:image/svg+xml,%3Csvg width='60' height='250' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,0 Q10,60 50,125 T50,250' fill='none' stroke='%232e8b57' stroke-width='3' opacity='0.8'/%3E%3Cpath d='M50,40 Q30,30 20,40 Q30,50 50,40' fill='%233cb371'/%3E%3Cpath d='M35,90 Q55,80 60,90 Q55,100 35,90' fill='%233cb371'/%3E%3Ccircle cx='30' cy='60' r='6' fill='%23ff69b4'/%3E%3Ccircle cx='50' cy='150' r='5' fill='%23ffb6c1'/%3E%3C/svg%3E");
+      background-position: left top, right top; background-repeat: repeat-y, repeat-y;
+    }
+    
+    /* Aşaky Kökler */
+    .roots-layer {
+      position: fixed; bottom: -10px; left: 0; right: 0; height: 120px; pointer-events: none; z-index: 6;
+      background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='120' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,120 Q50,40 100,100 T200,80 T300,110 T400,50 T500,100 T600,70 T700,110 T800,60 T900,100 T1000,40 L1000,120 Z' fill='none' stroke='%23556b2f' stroke-width='4' opacity='0.6'/%3E%3Cpath d='M0,120 Q80,20 150,90 T350,60 T550,90 T750,40 T1000,100 L1000,120 Z' fill='none' stroke='%238b4513' stroke-width='2' opacity='0.4'/%3E%3C/svg%3E");
+      background-size: cover; background-position: bottom;
+    }
+
+    /* Asmandan gaçýan Erik gülleri (Apricot blossoms) */
+    @keyframes fallDown{0%{transform:translateY(-10vh) translateX(0) rotate(0deg);opacity:0}10%{opacity:1}80%{opacity:0.9}100%{transform:translateY(110vh) translateX(50px) rotate(360deg);opacity:0}}
+    .apricot-blossom{position:fixed;width:35px;height:35px;animation:fallDown linear infinite;z-index:4;pointer-events:none;filter:drop-shadow(0 3px 8px rgba(255,105,180,0.5));will-change:transform,opacity}
+
+    /* 3D Kebelekler */
+    .butterfly-container { position: fixed; z-index: 60; cursor: pointer; transition: transform 4s cubic-bezier(0.25, 1, 0.5, 1); pointer-events: auto; }
+    .butterfly { position: relative; width: 30px; height: 30px; transform-style: preserve-3d; transform: rotateX(50deg) rotateZ(30deg); }
+    .wing { position: absolute; width: 15px; height: 26px; top: 2px; box-shadow: inset 0 0 8px rgba(0,0,0,0.4); transform-origin: right center; }
+    .wing-left { left: 0; border-radius: 50% 50% 10% 80%; animation: flap-l 0.12s infinite alternate; }
+    .wing-right { left: 15px; transform-origin: left center; border-radius: 50% 50% 80% 10%; animation: flap-r 0.12s infinite alternate; }
+    .butterfly-body { position: absolute; width: 4px; height: 18px; background: #333; left: 13px; top: 6px; border-radius: 10px; box-shadow: 0 0 2px black; transform: translateZ(2px); }
+    
+    /* Ganat kakmagyň tizlikleri */
+    @keyframes flap-l { from { transform: rotateY(0deg); } to { transform: rotateY(70deg); } }
+    @keyframes flap-r { from { transform: rotateY(0deg); } to { transform: rotateY(-70deg); } }
+    .resting .wing-left { animation: flap-l-rest 2.5s infinite alternate ease-in-out; }
+    .resting .wing-right { animation: flap-r-rest 2.5s infinite alternate ease-in-out; }
+    @keyframes flap-l-rest { from { transform: rotateY(10deg); } to { transform: rotateY(45deg); } }
+    @keyframes flap-r-rest { from { transform: rotateY(-10deg); } to { transform: rotateY(-45deg); } }
+
+    /* Esasy gaplar */
     .glass-container{background:rgba(255,255,255,0.92);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border:2px solid rgba(255,255,255,0.95);box-shadow:0 8px 32px 0 rgba(255,20,147,0.2),0 0 0 1px rgba(255,255,255,0.5) inset;border-radius:30px}
     #mainContent{display:none;opacity:0;transform:translateY(30px);transition:all 1s ease;position:relative;z-index:10}
     #mainContent.show{opacity:1;transform:translateY(0)}
     #intro{transition:opacity 1s ease,transform 1s ease;background:linear-gradient(135deg,rgba(255,20,147,0.3) 0%,rgba(255,105,180,0.2) 100%);backdrop-filter:blur(10px)}
-    .divider-line{height:2px;background:linear-gradient(90deg,transparent,rgba(255,20,147,0.4),transparent);flex-grow:1}
-    .intro-flower-btn{animation:heartbeat 2.5s infinite ease-in-out;cursor:pointer;background:transparent;border:none;box-shadow:none;display:flex;align-items:center;justify-content:center;width:320px;height:320px;transition:all .3s ease;margin:0 auto}
-    .intro-flower-btn img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 15px 25px rgba(255,20,147,0.5))}
-    .intro-flower-btn:hover{transform:scale(1.05) rotate(2deg)}
-    .second-page-flower{max-width:280px;width:100%;height:auto;margin:0 auto;filter:drop-shadow(0 15px 25px rgba(255,20,147,0.4));transition:transform .5s ease}
-    .second-page-flower:hover{transform:scale(1.05)}
-    .button-modern{background:linear-gradient(135deg,#ff1493 0%,#ff69b4 100%);border:none;border-radius:20px;padding:15px 30px;color:white;font-size:1rem;font-weight:bold;cursor:pointer;transition:all .3s ease;box-shadow:0 10px 30px rgba(255,20,147,0.3);display:inline-flex;align-items:center;gap:10px}
-    .button-modern:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,20,147,0.4)}
+    
+    @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.05);filter:drop-shadow(0 0 30px rgba(255,20,147,0.6))}}
+    .intro-flower-btn{animation:heartbeat 2.5s infinite ease-in-out;cursor:pointer;background:transparent;border:none;display:flex;align-items:center;justify-content:center;width:320px;height:320px;transition:all .3s ease;margin:0 auto}
+    .intro-flower-btn img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 15px 35px rgba(255,20,147,0.6))}
+    .intro-flower-btn:hover{transform:scale(1.08) rotate(3deg)}
+    
+    .button-modern{background:linear-gradient(135deg,#ff1493 0%,#ff69b4 100%);border:none;border-radius:20px;padding:15px 30px;color:white;font-size:1.1rem;font-weight:bold;cursor:pointer;transition:all .3s ease;box-shadow:0 10px 30px rgba(255,20,147,0.4);display:inline-flex;align-items:center;gap:10px}
+    .button-modern:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(255,20,147,0.5)}
 
-    /* Polaroid Galereýa üçin Dizaýn */
-    .polaroid-gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem; 
-      margin: 2rem auto;
-      padding: 0.5rem;
+    .polaroid-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem auto; padding: 0.5rem; }
+    .polaroid-item { background: #ffffff; padding: 10px 10px 35px 10px; box-shadow: 0 10px 25px rgba(255,20,147,0.2); border-radius: 4px; transition: transform 0.4s ease, box-shadow 0.4s ease; transform: rotate(-3deg); }
+    .polaroid-item:nth-child(even) { transform: rotate(3deg); }
+    .polaroid-item:hover { transform: scale(1.08) rotate(0deg); box-shadow: 0 15px 35px rgba(255,20,147,0.4); z-index: 10; position: relative; }
+    .polaroid-item img { width: 100%; height: 160px; object-fit: cover; border-radius: 2px; }
+    
+    .divider-line{height:2px;background:linear-gradient(90deg,transparent,rgba(255,20,147,0.4),transparent);flex-grow:1}
+    
+    /* Text daşyndaky çyrmaşyk */
+    .text-vine-wrapper { position: relative; padding: 20px; }
+    .text-vine-wrapper::before, .text-vine-wrapper::after {
+      content: ''; position: absolute; width: 50px; height: 100%; top: 0; background-size: contain; background-repeat: no-repeat; opacity: 0.8; z-index: -1;
     }
-    .polaroid-item {
-      background: #ffffff;
-      padding: 10px 10px 35px 10px; 
-      box-shadow: 0 10px 25px rgba(255,20,147,0.2);
-      border-radius: 4px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      transform: rotate(-3deg);
+    .text-vine-wrapper::before {
+      left: -20px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 150'%3E%3Cpath d='M25,0 Q0,50 25,100 T25,150' fill='none' stroke='%233cb371' stroke-width='2'/%3E%3Ccircle cx='15' cy='30' r='4' fill='%23ff69b4'/%3E%3Ccircle cx='35' cy='80' r='5' fill='%23ffb6c1'/%3E%3C/svg%3E");
     }
-    .polaroid-item:nth-child(even) {
-      transform: rotate(3deg);
-    }
-    .polaroid-item:hover {
-      transform: scale(1.08) rotate(0deg); 
-      box-shadow: 0 15px 35px rgba(255,20,147,0.4);
-      z-index: 10;
-      position: relative;
-    }
-    .polaroid-item img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 2px;
-      display: block;
-    }
-    .polaroid-caption {
-      text-align: center;
-      color: #ff1493;
-      font-size: 1.8rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-      text-shadow: 0 2px 4px rgba(255,20,147,0.1);
-      line-height: 1.4;
+    .text-vine-wrapper::after {
+      right: -20px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 150'%3E%3Cpath d='M25,0 Q50,50 25,100 T25,150' fill='none' stroke='%233cb371' stroke-width='2'/%3E%3Ccircle cx='35' cy='40' r='4' fill='%23ff69b4'/%3E%3Ccircle cx='15' cy='90' r='5' fill='%23ffb6c1'/%3E%3C/svg%3E");
     }
   </style>
  </head>
- <body class="min-h-screen text-white relative antialiased">
-  <div id="animations" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div>
+ <body class="min-h-screen text-white antialiased">
   
+  <div class="vines-layer"></div>
+  <div class="roots-layer"></div>
+  <div id="blossoms-layer" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div>
+  <div id="butterflies-layer" class="fixed inset-0 pointer-events-none overflow-hidden z-[60]"></div>
+
   <div id="intro" class="fixed inset-0 flex flex-col items-center justify-center z-50 cursor-pointer" onclick="openContent()">
-   <div class="text-center px-4">
-    <h2 class="text-3xl md:text-4xl text-white mb-10 dancing glow-text drop-shadow-lg leading-relaxed">Ömrümiň manysy,<br>ýüregimiň ýeke-täk eýesine...</h2>
+   <div class="text-center px-4 relative">
+    <h2 class="text-3xl md:text-5xl text-white mb-10 dancing glow-text drop-shadow-2xl leading-relaxed">Ömrümiň manysy,<br>ýüregimiň ýeke-täk eýesine...</h2>
     <div class="intro-flower-btn"><img src="https://i.postimg.cc/J7JycGpz/IMG_9334.png" alt="Söýgülüm üçin Gül" width="320" height="320"></div>
-    <div class="mt-8 text-lg md:text-xl font-bold text-white bg-gradient-to-r from-pink-400 to-pink-300 inline-block px-8 py-4 rounded-full animate-bounce shadow-[0_10px_25px_rgba(236,72,153,0.5)]">Açmak üçin güliň üstüne basyň ❤️</div>
+    <div class="mt-8 text-lg md:text-xl font-bold text-white bg-gradient-to-r from-pink-400 to-pink-300 inline-block px-8 py-4 rounded-full animate-bounce shadow-[0_10px_25px_rgba(236,72,153,0.5)] border-2 border-white/50">Açmak üçin güliň üstüne basyň ❤️</div>
    </div>
   </div>
-  
+
   <div id="mainContent" class="relative z-10 max-w-2xl mx-auto pt-10 pb-12 px-4 h-full overflow-auto flex flex-col items-center">
-   <div class="glass-container w-full p-8 md:p-10 mb-8 text-gray-800">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-pink-600 tracking-wide playfair drop-shadow-sm mb-6 mt-4 text-center">Ýüregimiň soltany,<br>bahar pasly dek owadan söýgüli ýarym, 8-nji mart baýramyň gutly bolsun!</h1>
+   <div class="glass-container w-full p-8 md:p-12 mb-8 text-gray-800 relative">
     
-    <div class="flex justify-center mb-8"><img src="https://i.postimg.cc/0jgz1syw/IMG_9336.png" alt="Owadan Buket" class="second-page-flower" width="280" height="280"></div>
+    <div id="top-greeting" class="text-vine-wrapper text-center mb-8 mt-2">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-pink-600 tracking-wide playfair drop-shadow-sm leading-tight">
+        Barlygy bilen ömrüme<br>bahar getiren zenanym,<br>
+        <span class="dancing text-5xl md:text-6xl text-pink-500 mt-2 block">8-nji Mart baýramyň gutly bolsun! ❤️</span>
+      </h1>
+    </div>
     
-    <p class="text-lg text-pink-600 font-bold mb-8 opacity-90 text-center">Sen – meň ykbalymyň maňa peşgeş beren iň gymmatly baýlygy... 💕</p>
+    <div class="flex justify-center mb-10">
+      <img src="https://i.postimg.cc/bYCHFKGn/IMG-9414.png" alt="Täze Buket" class="w-64 md:w-80 h-auto filter drop-shadow-[0_20px_40px_rgba(255,20,147,0.5)] hover:scale-105 transition-transform duration-500">
+    </div>
     
-    <div class="mt-8 mb-12">
+    <div class="mt-4 mb-10">
      <p class="text-2xl text-pink-600 dancing mb-6 font-bold drop-shadow-sm text-center">Kalbymyzda söýgi uçguny döreli bäri...</p>
      <div class="flex justify-center gap-2 sm:gap-4">
       <div class="bg-white border-2 border-pink-200 rounded-2xl w-20 h-24 flex flex-col items-center justify-center shadow-[0_8px_20px_rgba(236,72,153,0.12)] hover:-translate-y-1 transition-transform"><span id="c-days" class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-red-500 playfair">00</span><span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mt-1">Gün</span></div>
@@ -116,103 +144,179 @@
      </div>
     </div>
     
-    <div class="my-10 italic text-lg md:text-xl text-gray-700 font-medium playfair leading-relaxed bg-gradient-to-r from-pink-50 to-red-50 p-6 rounded-2xl border-l-4 border-pink-400 shadow-sm text-left">
-     Gözleriň gözlerime kaklyşan şol ilkinji pursat kalbymda ebedilik nagyş bolup galdy. Şol pursat bütin älem togtan ýaly boldy we ýüregimiň birje urgusynda tutuş ömrümi baglaýjak yşkymy tapandygyma düşündim. Seniň mähirli ýylgyryşyň garaňky gijelerimi ýagtyldyp, ykbalymy iň owadan reňkler bilen täzeden ýazdy... ✨
+    <div class="my-10 italic text-xl md:text-2xl text-gray-700 font-medium playfair leading-relaxed bg-gradient-to-r from-white to-pink-50 p-6 md:p-8 rounded-3xl border-l-4 border-pink-400 shadow-[0_10px_20px_rgba(255,20,147,0.1)] text-center relative">
+     "Senli geçen her günüm ömrümiň iň süýji ertekisi. Ýüregimiň birje urgusynda seni nähili güýçli söýýändigime düşündim... ✨"
     </div>
     
     <div class="flex items-center justify-center my-10 w-full opacity-70">
-     <div class="divider-line"></div>
-     <div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div>
-     <div class="divider-line"></div>
+     <div class="divider-line"></div><div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div><div class="divider-line"></div>
     </div>
     
     <p class="text-2xl text-pink-600 dancing mb-6 font-bold drop-shadow-sm text-center">Biziň yşk aýdymymyz 🎵</p>
     
     <div class="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-pink-200 bg-black mb-8 relative flex items-center justify-center" style="aspect-ratio: 16/9;">
-     <video id="loveVideo" 
-            controls 
-            playsinline 
-            preload="metadata" 
-            poster="https://i.postimg.cc/0jgz1syw/IMG_9336.png"
-            class="absolute inset-0 w-full h-full object-cover" 
-            style="outline:none;display:block;">
+     <video id="loveVideo" controls playsinline preload="metadata" poster="https://i.postimg.cc/bYCHFKGn/IMG-9414.png" class="absolute inset-0 w-full h-full object-cover" style="outline:none;display:block;">
        <source src="Video.mp4" type="video/mp4">
        Siziň brauzeriňiz wideony açyp bilenok.
      </video>
     </div>
     
     <div class="flex items-center justify-center my-10 w-full opacity-70">
-     <div class="divider-line"></div>
-     <div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div>
-     <div class="divider-line"></div>
+     <div class="divider-line"></div><div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div><div class="divider-line"></div>
     </div>
     
     <p class="text-2xl text-pink-600 dancing font-bold drop-shadow-sm text-center mt-4">Biziň iň süýji ýatlamalarymyz 📸</p>
     
     <div class="polaroid-gallery">
-      <div class="polaroid-item">
-        <img src="https://i.postimg.cc/Pr86hbpG/IMG_9358.jpg" alt="Ýatlama 1" width="300" height="160">
-      </div>
-      <div class="polaroid-item">
-        <img src="https://i.postimg.cc/SNzZqLXD/IMG_9359.jpg" alt="Ýatlama 2" width="300" height="160">
-      </div>
-      <div class="polaroid-item">
-        <img src="https://i.postimg.cc/hP7Cg8Jk/IMG_9360.jpg" alt="Ýatlama 3" width="300" height="160">
-      </div>
-      <div class="polaroid-item">
-        <img src="https://i.postimg.cc/NGnNWC0K/IMG_9361.jpg" alt="Ýatlama 4" width="300" height="160">
-      </div>
+      <div class="polaroid-item"><img src="https://i.postimg.cc/Pr86hbpG/IMG_9358.jpg" alt="Ýatlama 1" width="300" height="160"></div>
+      <div class="polaroid-item"><img src="https://i.postimg.cc/SNzZqLXD/IMG_9359.jpg" alt="Ýatlama 2" width="300" height="160"></div>
+      <div class="polaroid-item"><img src="https://i.postimg.cc/hP7Cg8Jk/IMG_9360.jpg" alt="Ýatlama 3" width="300" height="160"></div>
+      <div class="polaroid-item"><img src="https://i.postimg.cc/NGnNWC0K/IMG_9361.jpg" alt="Ýatlama 4" width="300" height="160"></div>
     </div>
     
-    <div class="polaroid-caption dancing font-bold">
-     Senli geçen her pursadym, ömrümiň iň süýji ertekisi... ✨
+    <div class="text-center text-pink-600 dancing text-2xl font-bold mt-4 mb-10 text-shadow-sm">
+     Senli geçen pursatlam – ýaşaýşymyň bezegi... ✨
     </div>
     
     <div class="flex items-center justify-center my-10 w-full opacity-70">
-     <div class="divider-line"></div>
-     <div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div>
-     <div class="divider-line"></div>
+     <div class="divider-line"></div><div class="px-6 text-xl tracking-[0.3em] animate-pulse drop-shadow-md text-pink-400">✿ ✿ ✿</div><div class="divider-line"></div>
     </div>
     
-    <div class="text-left bg-gradient-to-br from-white to-pink-50 p-6 md:p-8 rounded-3xl shadow-[0_10px_30px_rgba(255,20,147,0.1)] border border-pink-200 mb-10 relative overflow-hidden">
+    <div class="text-center bg-gradient-to-br from-white to-pink-50 p-6 md:p-10 rounded-3xl shadow-[0_15px_40px_rgba(255,20,147,0.15)] border border-pink-200 mb-10 relative overflow-hidden">
      <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-300 via-red-300 to-pink-300"></div>
-     <h3 class="text-3xl dancing text-pink-600 mb-4 font-bold text-center mt-2">Meniň owadan Şa zenanym,</h3>
-     <p class="text-[1.05rem] text-gray-700 leading-relaxed font-medium">Şu ajaýyp 8-nji mart güninde, seniň barlygyňyň durmuşyma nähili uly many we gözellik goşýandygyny ýene bir gezek ýatlatmak isleýärin. Sen meniň ylhamym, kalbymyň rahatlygy we ömrümiň iň süýji begenji. Edýän ähli arzuw-umytlarym, diňe seniň ýüzüňdäki şol mähir doly ýylgyryşy ebedi saklamak üçindir. Goý, seniň durmuşyňam maňa eçilýän söýgiň ýaly tämiz, asuda we reňkli bolsun. 8-mart baýramyň gutly bolsun, ömrümiň bezegi. Seni çäksiz we ebedi söýýärin! 💗</p>
+     <h3 class="text-3xl md:text-4xl dancing text-pink-600 mb-6 font-bold mt-2">Meniň owadan Şa zenanym,</h3>
+     <p class="text-lg text-gray-700 leading-relaxed font-medium">
+      Mähribanym, seniň barlygyň durmuşyma iň uly sowgat! Ähli islegim – diňe seniň bagtly bolmagyň we mydama şeýle owadan ýylgyryp gezmegiň. Goý, her günüň şu ajaýyp bahar pasly ýaly tämiz, asuda we reňkli geçsin. Baýramyň gutly bolsun, ýeke-tägim! Seni çäksiz we ebedi söýýärin! 💗
+     </p>
     </div>
     
-    <div class="text-center py-12">
-     <div class="flex justify-center mb-4"><img src="https://i.postimg.cc/tgTZhkcn/IMG_9343.png" alt="Söýgi nyşany" class="w-32 md:w-40 drop-shadow-[0_10px_15px_rgba(255,20,147,0.4)] hover:scale-105 transition-transform duration-300" width="160" height="160"></div>
-     <p class="text-2xl dancing text-pink-600 font-bold mt-8">I love you</p>
+    <div class="text-center py-8 relative">
+     <div class="flex justify-center mb-6">
+       <img src="https://i.postimg.cc/tgTZhkcn/IMG_9343.png" alt="Söýgi nyşany" class="w-56 md:w-64 drop-shadow-[0_15px_25px_rgba(255,20,147,0.5)] hover:scale-110 transition-transform duration-300 z-10 relative">
+     </div>
+     <p class="text-4xl dancing text-pink-600 font-extrabold mt-6 glow-text">I love you</p>
     </div>
     
-    <button onclick="goHome()" class="button-modern w-full mt-8 justify-center">
-     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-     Baş sahypa dolan
-    </button>
+    <div class="relative w-full flex justify-center mt-12 mb-4">
+      <div class="absolute -inset-10 bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 100%22%3E%3Cpath d=%22M20,80 Q100,20 180,80%22 fill=%22none%22 stroke=%22%232e8b57%22 stroke-width=%223%22 opacity=%220.5%22/%3E%3Ccircle cx=%2240%22 cy=%2260%22 r=%225%22 fill=%22%23ff69b4%22/%3E%3Ccircle cx=%22160%22 cy=%2260%22 r=%225%22 fill=%22%23ff69b4%22/%3E%3C/svg%3E')] bg-no-repeat bg-center bg-contain z-0 pointer-events-none"></div>
+      <button onclick="goHome()" class="button-modern w-full md:w-auto justify-center relative z-10">
+       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+       Baş sahypa dolan
+      </button>
+    </div>
+
    </div>
   </div>
 
   <script>
     const intro = document.getElementById('intro');
     const mainContent = document.getElementById('mainContent');
-    const container = document.getElementById('animations');
+    const blossomsContainer = document.getElementById('blossoms-layer');
+    const butterContainer = document.getElementById('butterflies-layer');
     let hasOpened = false;
-    let petalCount = 0;
+    let blossomCount = 0;
+    let butterflies = [];
 
-    const PETAL_SVG = `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><g transform="translate(50,50)"><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ff1493" opacity="0.85" transform="rotate(0)"/><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ff69b4" opacity="0.85" transform="rotate(72)"/><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ff85c1" opacity="0.85" transform="rotate(144)"/><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ffb6c1" opacity="0.85" transform="rotate(216)"/><ellipse cx="0" cy="-30" rx="15" ry="28" fill="#ffc0cb" opacity="0.85" transform="rotate(288)"/><circle cx="0" cy="0" r="12" fill="#ffd700" opacity="0.95"/></g></svg>`;
+    // Owadan Erik Güli (Apricot Blossom) SVG
+    const APRICOT_SVG = `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><g transform="translate(50,50)"><circle cx="0" cy="-22" r="20" fill="#fff5f8" stroke="#ffb6c1" stroke-width="1"/><circle cx="-21" cy="-7" r="20" fill="#fff5f8" stroke="#ffb6c1" stroke-width="1"/><circle cx="-13" cy="18" r="20" fill="#fff5f8" stroke="#ffb6c1" stroke-width="1"/><circle cx="13" cy="18" r="20" fill="#fff5f8" stroke="#ffb6c1" stroke-width="1"/><circle cx="21" cy="-7" r="20" fill="#fff5f8" stroke="#ffb6c1" stroke-width="1"/><circle cx="0" cy="0" r="7" fill="#ff1493"/><circle cx="0" cy="0" r="3" fill="#ffd700"/></g></svg>`;
 
-    function createFlowerPetal() {
-      if (petalCount >= 30) return;
-      petalCount++;
+    function createApricotBlossom() {
+      if (blossomCount >= 25) return;
+      blossomCount++;
       const el = document.createElement('div');
-      el.className = 'floating-item';
-      el.innerHTML = PETAL_SVG;
-      el.style.cssText = `left:${Math.random() * 100}%;animation-duration:${8 + Math.random() * 12}s`;
-      container.appendChild(el);
+      el.className = 'apricot-blossom';
+      el.innerHTML = APRICOT_SVG;
+      // Güliň göwrümini we tizligini tötänleýin saýlamak
+      const scale = 0.5 + Math.random() * 0.8;
+      el.style.left = `${Math.random() * 100}vw`;
+      el.style.animationDuration = `${10 + Math.random() * 15}s`;
+      el.style.transform = `scale(${scale})`;
+      blossomsContainer.appendChild(el);
+      setTimeout(() => { el.remove(); blossomCount--; }, 25000);
+    }
+
+    // Kebelekleriň reňkleri (Hakyky jadyly öwüşginler)
+    const butterflyGradients = [
+      'radial-gradient(circle at 30% 30%, #00BFFF, #00008B)', // Gök
+      'radial-gradient(circle at 30% 30%, #FFA500, #8B0000)', // Sary-Gara (Monarch)
+      'radial-gradient(circle at 30% 30%, #ff69b4, #8b008b)'  // Gülgüne-Mawy
+    ];
+
+    function createButterfly(id) {
+      const el = document.createElement('div');
+      el.className = 'butterfly-container resting';
+      el.id = `bf-${id}`;
+      
+      const color = butterflyGradients[id % butterflyGradients.length];
+      
+      el.innerHTML = `
+        <div class="butterfly">
+          <div class="wing wing-left" style="background:${color}"></div>
+          <div class="butterfly-body"></div>
+          <div class="wing wing-right" style="background:${color}"></div>
+        </div>
+      `;
+      
+      // Başda sahypanyň başynda (gülleriň ýa-da ýazgylaryň gapdalynda) gonsun
+      const startX = id % 2 === 0 ? Math.random() * 20 : 80 + Math.random() * 20;
+      const startY = Math.random() * 30; // Ýokarky bölekde
+      
+      el.style.left = `${startX}vw`;
+      el.style.top = `${startY}vh`;
+      
+      // Üstüne basanda uçup gidýär
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        flyButterfly(el, true);
+      });
+
+      butterContainer.appendChild(el);
+      butterflies.push(el);
+      
+      // Tötänleýin wagtda öz-özi uçup gonmagy
+      setInterval(() => {
+        if(Math.random() > 0.6) flyButterfly(el, false);
+      }, 8000 + Math.random() * 10000);
+    }
+
+    function flyButterfly(el, isScared) {
+      el.classList.remove('resting');
+      
+      // Akylly Gönükdirme: Eger ürküzilse uzak ýere uçýar, ýogsam başga gülüň / sarmaşygyň üstüne gonýar
+      let targetX, targetY;
+      const randZone = Math.random();
+      
+      if (randZone < 0.4) {
+        targetX = Math.random() * 15; // Çep sarmaşyk
+      } else if (randZone < 0.8) {
+        targetX = 85 + Math.random() * 15; // Sag sarmaşyk
+      } else {
+        targetX = 20 + Math.random() * 60; // Orta (Tekstiň golaýy)
+      }
+      
+      targetY = Math.random() * 90; 
+
+      // Kebelegiň ýüzüni uçýan tarapyna öwürmek
+      const currentX = parseFloat(el.style.left) || 0;
+      const isGoingRight = targetX > currentX;
+      const scaleX = isGoingRight ? 1 : -1;
+      const rotation = (Math.random() - 0.5) * 40; // Azajyk gyşarmak
+
+      el.style.transform = `translate(${targetX - currentX}vw, ${targetY - (parseFloat(el.style.top)||0)}vh) scaleX(${scaleX}) rotate(${rotation}deg)`;
+      
       setTimeout(() => {
-        el.remove();
-        petalCount--;
-      }, 20000);
+        // Uçup baransoň dynç alýar (Ganat kakmasy haýallaýar)
+        el.style.left = `${targetX}vw`;
+        el.style.top = `${targetY}vh`;
+        el.style.transform = `scaleX(${scaleX}) rotate(0deg)`;
+        el.classList.add('resting');
+      }, 4000); // 4 sekunt uçuş
+    }
+
+    function initButterflies() {
+      for(let i = 0; i < 7; i++) {
+        setTimeout(() => createButterfly(i), i * 500);
+      }
     }
 
     function openContent() {
@@ -231,15 +335,17 @@
         intro.style.display = 'none';
         mainContent.style.display = 'flex';
         requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            mainContent.classList.add('show');
-          });
+          mainContent.classList.add('show');
         });
         window.scrollTo(0, 0);
+        
+        // Wideo taýýarlyk (Eger işlemeýän bolsa)
         const loveVideo = document.getElementById('loveVideo');
-        if (loveVideo) {
-          loveVideo.currentTime = 0;
-        }
+        if (loveVideo) { loveVideo.currentTime = 0; }
+        
+        // Kebelekleri oýatmak (Ikinji sahypa girende herekete başlasynlar)
+        butterflies.forEach(b => flyButterfly(b, false));
+
       }, 800);
     }
 
@@ -251,9 +357,7 @@
       }
 
       const loveVideo = document.getElementById('loveVideo');
-      if (loveVideo) {
-        loveVideo.pause();
-      }
+      if (loveVideo) { loveVideo.pause(); }
       
       mainContent.classList.remove('show');
       setTimeout(() => {
@@ -294,10 +398,10 @@
       requestAnimationFrame(tick);
     }
 
-    let petalInterval = setInterval(createFlowerPetal, 2500);
-    const frag = document.createDocumentFragment();
-    for (let i = 0; i < 10; i++) setTimeout(createFlowerPetal, i * 300);
-
+    // Gülleri we kebelekleri işletmek
+    setInterval(createApricotBlossom, 1500);
+    for (let i = 0; i < 15; i++) setTimeout(createApricotBlossom, i * 200);
+    initButterflies();
     startTogetherCounter();
   </script>
  </body>
